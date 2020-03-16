@@ -62,10 +62,10 @@
 %%   \mcodefn{} instead (this will reduce the font size a bit).
 %%
 %%   Note:  Inside code blocks you  can escape to LaTeX text mode
-%%   using ง...ง.  For ex. งtext and some math: $x^2$ง,  which is
+%%   using ยง...ยง.  For ex. ยงtext and some math: $x^2$ยง,  which is
 %%   especially  useful  in comments  for putting  nicely typeset
 %%   equations etc.  To get the same  colour/style as in the rest
-%%   of the comment use \mcommentfont, i.e. ง\mcommentfont $x^2$ง
+%%   of the comment use \mcommentfont, i.e. ยง\mcommentfont $x^2$ยง
 %%
 %%   To change the font used,  edit the first line in the "custo-
 %%   mise below" section.  And feel free to  edit other things as
@@ -79,14 +79,14 @@
 %%
 %%   Version history:
 %%      2.7  --  Bugfixes + keywords (thanks Hildo Guillardi Jr.)
-%%      2.6  --  Add support for ต, fix for math-minus problem
+%%      2.6  --  Add support for ยต, fix for math-minus problem
 %%      2.5  --  Renamed internal variables (thx S. Kranenbarg!)
 %%      2.4  --  Added \mcodefn{} command (thx Tony Almeida!)
 %%      2.3  --  More keywords (thx Dominik Wild!)
 %%      2.2  --  Bugfix (thx Willi Gerbig!)
 %%      2.1  --  Finally automatic detection between end and end
 %%      2.0  --  New options for line breaking and literate prog.
-%%      1.8  --  Fixed typo in documentation regarding ง...ง
+%%      1.8  --  Fixed typo in documentation regarding ยง...ยง
 %%      1.7  --  Added MATLAB block comment syntax %{ ...... %}
 %%      1.6  --  Added some infos, dealing with keyword ``end''
 %%      1.5  --  Tweaked check to see wether textcomp is loaded
@@ -165,7 +165,7 @@
 \fi
 
 % Check if textcomp has been loaded (this package is needed for
-% upright quotes '' (instead of typographic ones `ด)...
+% upright quotes '' (instead of typographic ones `ยด)...
 \ifx\textquotesingle\undefined% 
   \RequirePackage{textcomp}%
 \fi
@@ -199,7 +199,7 @@
   basicstyle={\lstbasicfont},                 % set font
   showstringspaces=false,                     % do not emphasize spaces in strings
   tabsize=4,                                  % number of spaces of a TAB
-  mathescape=false,escapechar=ง,              % escape to latex with ง...ง
+  mathescape=false,escapechar=ยง,              % escape to latex with ยง...ยง
   upquote=true,                               % upright quotes
   aboveskip={1.5\baselineskip},               % a bit of space above listings
   columns=fixed                               % nice spacing
@@ -243,7 +243,7 @@
 			{>=}{{\tiny$\geq$}}1 %         \geq
 			{~=}{{\tiny$\neq$}}1 %         \neq, not equal
 			{delta}{{\tiny$\Delta$}}1 %    \Delta
-			{ต}{{$\mu$}}1 %                \mu
+			{ยต}{{$\mu$}}1 %                \mu
 			{(end)}{\lstbasicfont (end)}{5} % black ``end'' when indexing last vector element
 			{({ }end)}{\lstbasicfont ({ }end)}{6}
 			{(end{ })}{\lstbasicfont (end{ })}{6}
@@ -268,7 +268,7 @@
 			{end{ }:}{\lstbasicfont end{ }:}{5}
 			{,end}{\lstbasicfont ,end}{4}
 			{,{ }end}{\lstbasicfont ,{ }end}{5}
-			{ต}{$\mu$}1
+			{ยต}{$\mu$}1
 			{~}{{\fontfamily{ptm}\selectfont\texttildelow}}1 % get a nicer tilde character
 	}
 \fi%literates
